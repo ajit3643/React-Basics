@@ -10,9 +10,7 @@ available over a CDN.
 
 ● An essential prerequisite is an internet connection.
 ● If there is a server issue, packages might not load.
-● Since one script file may be dependent on another, the order of CDN
-links is important. Browsers are not capable of linking files together. It's
-possible that script files won't link correctly.
+● Since one script file may be dependent on another, the order of CDN links is important. Browsers are not capable of linking files together. It's possible that script files won't link correctly.
 ● You may forget to list all of the CDN connections required for an
 application.
 
