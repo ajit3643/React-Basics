@@ -21,7 +21,24 @@ class MovieCard extends React.Component {
             <div className="price">Rs. 199</div>
             <div className="footer">
               <div className="rating">8.9</div>
-              <div className="stars">Star</div>
+              <div className="star-dis">
+                <img
+                  className="str-btn"
+                  alt="decrease"
+                  src="https://cdn-icons-png.flaticon.com/128/1828/1828901.png"
+                />
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                  className="stars"
+                  alt="stars"
+                />
+                <img
+                  className="str-btn"
+                  alt="increase"
+                  src="https://cdn-icons-png.flaticon.com/128/3524/3524388.png"
+                />
+                <span>0</span>
+              </div>
               <button className="favourite-btn">Favourite</button>
               <button className="cart-btn">Add to Cart</button>
             </div>

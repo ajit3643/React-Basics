@@ -3,7 +3,7 @@ import "./index.css";
 function App() {
   return (
     <>
-      <h1>Movies</h1>
+      <h1>Movies-Card</h1>
       <MovieCard />
     </>
   );
