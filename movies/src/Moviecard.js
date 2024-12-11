@@ -9,6 +9,8 @@ class MovieCard extends React.Component {
       price: 199,
       rating: 8.9,
       stars: 0,
+      fav: false,
+      cart: false,
     };
     // this.addStars = this.addStars.bind(this);
   }
@@ -40,8 +42,18 @@ class MovieCard extends React.Component {
       };
     });
   };
+  handleFav = () => {
+    this.setState({
+      fav: !this.state.fav,
+    });
+  };
+  handleCart = () => {
+    this.setState({
+      cart: !this.state.cart,
+    });
+  };
   render() {
-    const { title, plot, price, rating, stars } = this.state;
+    const { title, plot, price, rating, stars, fav, cart } = this.state;
     return (
       <div className="main">
         <div className="movie-card">
@@ -77,8 +89,37 @@ class MovieCard extends React.Component {
                 />
                 <span>{stars}</span>
               </div>
-              <button className="favourite-btn">Favourite</button>
-              <button className="cart-btn">Add to Cart</button>
+              {/* {fav ? (
+                <button className="unfavourite-btn" onClick={this.handleFav}>
+                  Un-favourite
+                </button>
+              ) : (
+                <button className="favourite-btn" onClick={this.handleFav}>
+                  Favourite
+                </button>
+              )} */}
+              <button
+                className={fav ? "unfavourite-btn" : "favourite-btn"}
+                onClick={this.handleFav}
+              >
+                {fav ? "Unfavourite" : "Favourite"}
+              </button>
+              {/* {cart ? (
+                <button className="cart-btn" onClick={this.handleCart}>
+                  Add to Cart
+                </button>
+              ) : (
+                <button className="remove-cart-btn" onClick={this.handleCart}>
+                  Remove
+                </button>
+              )} */}
+
+              <button
+                className={cart ? "remove-cart-btn" : "cart-btn"}
+                onClick={this.handleCart}
+              >
+                {cart ? "Remove" : "Add to cart"}
+              </button>
             </div>
           </div>
         </div>
